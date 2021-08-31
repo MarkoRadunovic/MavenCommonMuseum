@@ -64,7 +64,7 @@ public class Specijalnost extends DomainObject{
 
     /**
      * Postavlja id specijalnosti na novu vrednost
-     * @param specijalnostId id specijalnosti kao long
+     * @param specijalnostId id specijalnosti kao int
      */
     public void setSpecijalnostId(int specijalnostId) {
         this.specijalnostId = specijalnostId;
