@@ -5,36 +5,84 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Klasa koja nasledjuje apstraktnu klasu DomainObject i predstavlja tip eksponata.
+ * 
+ * @author Marko Radunovic
+ * @version 0.1
+ *
+ */
 public class TipEksponata extends DomainObject{
 
+	/**
+	 * id tipa eksponata kao long
+	 */
     private long tipId;
+    
+    /**
+     * naziv tipa eksponata kao String
+     */
     private String nazivTipaEksponata;
 
+    /**
+     * Konstruktor koji inicijalizuje objekat klase TipEksponata i nista vise.
+     */
     public TipEksponata() {
     }
 
+    /**
+     * Konstruktor koji inicijalizuje objekat klase TipEksponata i postavlja vrednosti za sve atribute.
+     * @param tipId id tipa eksponata kao long
+     * @param nazivTipaEksponata naziv tipa kao String
+     */
     public TipEksponata(long tipId, String nazivTipaEksponata) {
         this.tipId = tipId;
         this.nazivTipaEksponata = nazivTipaEksponata;
     }
 
+    /**
+     * Vraca naziv tipa eksponata.
+     * @return naziv tipa eksponata kao String
+     */
     public String getNazivTipaEksponata() {
         return nazivTipaEksponata;
     }
 
+    /**
+     * Vraca id eksponata.
+     * @return id eksponata kao long
+     */
     public long getTipId() {
         return tipId;
     }
 
+    /**
+     * Postavlja naziv tipa eksponata na novu vrednost.
+     * @param nazivTipaEksponata naziv eksponata kao String
+     */
     public void setNazivTipaEksponata(String nazivTipaEksponata) {
         this.nazivTipaEksponata = nazivTipaEksponata;
     }
 
+    /**
+     * Postavlja id tipa eksponata na novu vrednost.
+     * @param tipId id tipa kao long
+     */
     public void setTipId(long tipId) {
         this.tipId = tipId;
     }
 
 
+    /**
+     * 
+     * Poredi dva tipa eksponata prema identifikacionom broju i proverava da li su isti. 
+     * Ako jesu vraca true, a ako nisu vraca false.
+     *
+     * @return <ul>
+     * 			<li>true - Ako su oba objekta klase TipEksponata i imaju isti tipId </li>
+     * 			<li>false - U svim ostalim slucajevima</li>
+     * 		  </ul>
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -53,6 +101,9 @@ public class TipEksponata extends DomainObject{
         return true;
     }
 
+    /**
+     * Vraca naziv tipa eksponata kao String
+     */
     @Override
     public String toString() {
         return nazivTipaEksponata;

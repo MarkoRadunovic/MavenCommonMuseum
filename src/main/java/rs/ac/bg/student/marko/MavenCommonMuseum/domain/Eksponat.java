@@ -198,7 +198,6 @@ public class Eksponat extends DomainObject{
      * 			<li>false - U svim ostalim slucajevima</li>
      * 		  </ul>
      */
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
